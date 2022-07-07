@@ -21,6 +21,15 @@ class ViewController: UIViewController {
     
     var answerNumber = 0
     @IBAction func shuffleAction(_ sender: Any) {
+        var newAnswerNumber = 0
+        
+        repeat{
+            newAnswerNumber = Int.random(in: 0..<3)
+            
+        }while answerNumber == newAnswerNumber
+        
+        answerNumber = newAnswerNumber
+        
         if answerNumber == 0 {
             answerLabel.text = "グー"
             answerImageView.image = UIImage(named: "gu")
@@ -31,9 +40,6 @@ class ViewController: UIViewController {
             answerLabel.text = "パー"
             answerImageView.image = UIImage(named: "pa")
         }
-        
-        answerNumber = answerNumber + 1
-        
     }
 }
 
