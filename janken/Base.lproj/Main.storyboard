@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="janken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2b-4O-T9T">
+                                <rect key="frame" x="0.0" y="44" width="414" height="698"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これからじゃんけんをします" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flp-3l-LZF">
+                                <rect key="frame" x="0.0" y="742" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="EXR-MH-3v3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="y2w-Uf-oXH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-EF-g37">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="rs3-z4-r3k"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="じゃんけんをする">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJC-4l-IEW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3Su-M6-Rr2"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Yp-JU-yOK"/>
+                            <constraint firstItem="h2b-4O-T9T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5eO-Vv-Eps"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6HH-Tz-aKc"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="top" secondItem="h2b-4O-T9T" secondAttribute="bottom" id="89z-cw-66p"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="top" secondItem="Flp-3l-LZF" secondAttribute="bottom" id="9CB-9l-RBg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2b-4O-T9T" secondAttribute="trailing" id="GtA-B3-Pf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yIV-EF-g37" secondAttribute="trailing" id="JX4-gn-fgC"/>
+                            <constraint firstItem="h2b-4O-T9T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KBK-sp-Kh6"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LUm-cG-N3f"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="top" secondItem="Flp-3l-LZF" secondAttribute="bottom" id="NXc-ia-R9n"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ned-Vz-Fdf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Flp-3l-LZF" secondAttribute="trailing" id="O7j-Dx-WOD"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Orp-f1-HRF"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aVS-bu-TYv"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gED-pS-NZd"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gUk-Ua-yvx"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iMb-ew-dYO"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mOV-lP-bgX"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mc4-nV-Fuf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yIV-EF-g37" secondAttribute="bottom" id="mtv-6R-uuz"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="top" secondItem="Flp-3l-LZF" secondAttribute="bottom" id="rV5-Ha-Abm"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="top" secondItem="Flp-3l-LZF" secondAttribute="bottom" id="rqo-IP-IiN"/>
+                            <constraint firstItem="yIV-EF-g37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rvr-kk-jfT"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s2M-UV-O6T"/>
+                            <constraint firstItem="h2b-4O-T9T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xEE-a3-gYR"/>
+                            <constraint firstItem="Flp-3l-LZF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yPj-bc-vBv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerImageView" destination="h2b-4O-T9T" id="gxb-tG-7UL"/>
+                        <outlet property="answerLabel" destination="Flp-3l-LZF" id="sai-gs-9R1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
